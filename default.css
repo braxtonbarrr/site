@@ -1,0 +1,43 @@
+:root {
+	--text-color: black;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+
+	padding: 1rem 1rem;
+
+	font-size: 1.5rem;
+	background-color: rgb(205, 130, 215);
+
+	nav {
+		display: inherit;
+	}
+
+	a {
+		color: inherit;
+		text-decoration: none;
+		padding-inline: 15px;
+	}
+
+	> * {
+		width: calc(100%/3);
+	}
+
+}
+
+body {
+	color: var(--text-color);
+
+	margin: 0px;
+	padding: 0px;
+
+	#main {
+		padding: 20px;
+	}
+}
+
+/* body { */
+/* 	style */
+/* }	 */
