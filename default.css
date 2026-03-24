@@ -32,10 +32,19 @@ body {
 
 	margin: 0px;
 	padding: 0px;
+	background: #0d0d0d; 
 
 	#main {
 		padding: 20px;
 	}
+}
+#vector-field {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%; 
+	height: 100%;
+	z-index: -1;
 }
 
 /* body { */
