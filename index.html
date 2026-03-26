@@ -5,26 +5,102 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Braxton Barr</title>
+  <title>Braxton Barr</title>
   <link rel="stylesheet" href="default.css"/>
+  <style>
+    /* ── Main layout ── */
+    #main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2.5rem;
+      padding: 4rem 1.5rem 6rem;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+ 
+    /* ── Name ── */
+    #main-name {
+      color: #ffffff;
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      text-align: center;
+      margin: 0;
+    }
+ 
+    /* ── 3×2 link grid ── */
+    #main-links {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+      width: 100%;
+    }
+ 
+    #main-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.65rem 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 6px;
+      color: rgba(255, 255, 255, 0.85);
+      text-decoration: none;
+      font-size: 0.9rem;
+      letter-spacing: 0.03em;
+      background: rgba(255, 255, 255, 0.05);
+      transition: background 0.2s, border-color 0.2s, color 0.2s;
+      white-space: nowrap;
+    }
+ 
+    #main-links a:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.4);
+      color: #ffffff;
+    }
+ 
+    /* ── About section ── */
+    #main-about {
+      width: 100%;
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 0.97rem;
+      line-height: 1.75;
+      text-align: center;
+    }
+ 
+    /* ── Responsive: collapse to 2 cols on narrow screens ── */
+    @media (max-width: 420px) {
+      #main-links {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
 </head>
-
 <body>
-	<canvas id="vector-field"></canvas>
-	<header>
-
-			<a id="home-display" href='/'>braxtonbarr.ca</a>
-
-	</header>
-
-  <div id="main">Check back soon.</div>
-  <!--<script src="index.js"></script>-->
-		<nav id="menu-external">
-			<a href='/'>External</a>
-			<a href='/'>External</a>
-			<a href='/'>External</a>
-		</nav>
-	<script src="vector-field.js"></script>
+  <canvas id="vector-field"></canvas>
+  <header>
+    <a id="home-display" href="/">braxtonbarr.ca</a>
+  </header>
+ 
+  <div id="main">
+ 
+    <h1 id="main-name">Braxton Barr</h1>
+ 
+    <nav id="main-links">
+      <a href="mailto:owner@braxtonbarr.ca">owner@braxtonbarr.ca</a>
+      <a href="https://www.youtube.com/@braxtonbarr">YouTube</a>
+      <a href="https://www.linkedin.com/in/braxtonbarr/">LinkedIn</a>
+      <a href="https://substack.com/@braxtonbarr">Substack</a>
+      <a href="https://www.instagram.com/braxtonbarrr/">Instagram</a>
+      <a href="https://github.com/braxtonbarrr">GitHub</a>
+    </nav>
+ 
+    <p id="main-about">
+      <!-- Your about text goes here. --> An undergraduate psychology student interested in psychological statistics and research. 
+    </p>
+ 
+  </div>
+ 
+  <script src="vector-field.js"></script>
 </body>
-
 </html>
